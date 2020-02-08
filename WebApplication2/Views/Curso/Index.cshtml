@@ -1,0 +1,66 @@
+﻿
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Controlador Curso</h2>
+
+<link href="~/Content/datatables.css" rel="stylesheet" />
+<label>ingrese nombre del curso</label>
+<input type="text" id="txtNombre" />
+<input type="button" id="btnBuscar" value="buscar" class="btn btn-primary" />
+<input type="button" id="btnLimpiar" value="limpiar" class="btn btn-info" />
+<br />
+<!-- Button trigger modal -->
+<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">
+    agregar
+</button> 
+
+
+<div id="tabla">
+
+ 
+</div>
+
+<!--agregar ventana modal-->
+
+<div class="modal " id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+              <table style="width:80%; margin:auto" >
+                  <tr>
+                      <td width="40%">id curso </td>
+                      <td width="60%"><input type="text" id="txtIdCurso" readonly /> </td>
+                  </tr>
+                  <tr>
+                      <td width="40%">ingrese nombre del curso </td>
+                      <td width="60%"><input type="text" id="txtNombreCurso"  /> </td>
+                  </tr>
+                  <tr>
+                      <td width="40%">ingrese descripcion curso </td>
+                      <td width="60%"><input type="text" id="txtDescripcion" /> </td>
+                  </tr>
+              </table>
+
+
+
+            </div>
+            <div class="modal-footer">
+                <button type="button" id="btnAceptar" class="btn btn-primary" data-dismiss="modal">aceptar</button>
+                <button type="button" id="btnCancelar" class="btn btn-danger" data-dismiss="modal">Cancelar</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script src="~/scripts/jquery-1.10.2.min.js"></script>
+<script src="~/scripts/datatables.min.js"></script>
+<script src="~/scripts/Curso.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
